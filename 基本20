@@ -1,0 +1,37 @@
+// basic homework 20 (3A713257)
+#include <stdio.h> 
+#include <stdlib.h> 
+#define MAX 5
+int main()
+{
+	struct data{
+		char brnd[10];
+		char mdl[10];
+		int yr;
+		int prc;
+	}phone[MAX];
+	int i;
+	for(i=1;i<MAX;i++){
+		printf("no.%d phone\n",i);
+		printf("brand:");
+		scanf("%s",&phone[i].brnd);
+		printf("model:");
+		scanf("%s",&phone[i].mdl);
+		printf("year of manufacture:");
+		scanf("%d",&phone[i].yr);
+		printf("price:");
+		scanf("%d",&phone[i].prc);
+		fflush(stdin);
+		system("cls");
+	}
+	for(i=1;i<MAX;i++){
+		printf("no.%d phone\n",i);
+		printf("brand:%s\n",phone[i].brnd);
+		printf("model:%s\n",phone[i].mdl);
+		printf("year of manufacture:%d\n",phone[i].yr);
+		printf("price:%d\n",phone[i].prc);
+		printf("\n");
+	}	
+	system("pause");
+    return 0;
+}
